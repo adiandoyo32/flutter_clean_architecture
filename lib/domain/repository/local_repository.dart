@@ -6,4 +6,6 @@ abstract class LocalRepositoryInterface {
   Future<String> setToken(String token);
   Future<User> getUser();
   Future<User> setUser(User user);
+  Future<bool?> isDarkMode();
+  Future<void> saveDarkMode(bool darkMode);
 }

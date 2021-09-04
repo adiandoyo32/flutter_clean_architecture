@@ -6,13 +6,13 @@ const _pref_token = "TOKEN";
 const _pref_username = "USERNAME";
 const _pref_name = "NAME";
 const _pref_image = "IMAGE";
+const _pref_dark_theme = 'THEME_DARK';
 
 class LocalRepositoryImpl extends LocalRepositoryInterface {
   @override
   Future<void> clearAllData() async {
     SharedPreferences sharedPreferences = await SharedPreferences.getInstance();
     sharedPreferences.clear();
-    throw UnimplementedError();
   }
 
   @override
@@ -47,5 +47,17 @@ class LocalRepositoryImpl extends LocalRepositoryInterface {
     sharedPreferences.setString(_pref_image, user.image ?? '');
 
     return user;
+  }
+
+  @override
+  Future<bool?> isDarkMode() async {
+    SharedPreferences sharedPreferences = await SharedPreferences.getInstance();
+    return sharedPreferences.getBool(_pref_dark_theme);
+  }
+
+  @override
+  Future<void> saveDarkMode(bool darkMode) async {
+    SharedPreferences sharedPreferences = await SharedPreferences.getInstance();
+    sharedPreferences.setBool(_pref_dark_theme, darkMode);
   }
 }
