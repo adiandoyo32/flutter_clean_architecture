@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_getx_architecture/presentation/main_binding.dart';
 import 'package:flutter_getx_architecture/presentation/routes/router.dart';
+import 'package:flutter_getx_architecture/presentation/theme.dart';
 import 'package:get/get.dart';
 
 void main() {
@@ -13,9 +14,8 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
+      theme: darkTheme,
+      // themeMode: lightTheme,
       initialRoute: AppRoutes.splash,
       getPages: AppPages.pages,
       initialBinding: MainBinding(),

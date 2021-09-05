@@ -17,7 +17,7 @@ class ApiRepositoryImpl extends ApiRepositoryInterface {
 
   @override
   Future<LoginResponse> login(LoginRequest loginRequest) async {
-    await Future.delayed(const Duration(seconds: 3));
+    await Future.delayed(const Duration(seconds: 2));
     if (loginRequest.username == 'admin' && loginRequest.password == 'admin') {
       return LoginResponse(
         token: '001',

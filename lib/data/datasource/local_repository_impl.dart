@@ -56,7 +56,7 @@ class LocalRepositoryImpl extends LocalRepositoryInterface {
   }
 
   @override
-  Future<void> saveDarkMode(bool darkMode) async {
+  Future<void> setDarkMode(bool darkMode) async {
     SharedPreferences sharedPreferences = await SharedPreferences.getInstance();
     sharedPreferences.setBool(_pref_dark_theme, darkMode);
   }

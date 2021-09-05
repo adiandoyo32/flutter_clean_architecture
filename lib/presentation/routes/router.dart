@@ -1,3 +1,7 @@
+import 'package:flutter_getx_architecture/presentation/pages/home/home_page.dart';
+import 'package:flutter_getx_architecture/presentation/pages/login/login_binding.dart';
+import 'package:flutter_getx_architecture/presentation/pages/login/login_page.dart';
+import 'package:flutter_getx_architecture/presentation/pages/splash/splash_binding.dart';
 import 'package:flutter_getx_architecture/presentation/pages/splash/splash_page.dart';
 import 'package:get/get.dart';
 
@@ -12,14 +16,16 @@ class AppPages {
     GetPage(
       name: AppRoutes.splash,
       page: () => SplashPage(),
+      binding: SplashBinding(),
     ),
     GetPage(
       name: AppRoutes.login,
-      page: () => SplashPage(),
+      page: () => LoginPage(),
+      binding: LoginBinding(),
     ),
     GetPage(
       name: AppRoutes.home,
-      page: () => SplashPage(),
+      page: () => HomePage(),
     ),
   ];
 }
