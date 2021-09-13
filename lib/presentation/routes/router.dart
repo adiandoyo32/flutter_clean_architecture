@@ -1,3 +1,4 @@
+import 'package:flutter_getx_architecture/presentation/pages/home/home_binding.dart';
 import 'package:flutter_getx_architecture/presentation/pages/home/home_page.dart';
 import 'package:flutter_getx_architecture/presentation/pages/login/login_binding.dart';
 import 'package:flutter_getx_architecture/presentation/pages/login/login_page.dart';
@@ -26,6 +27,7 @@ class AppPages {
     GetPage(
       name: AppRoutes.home,
       page: () => HomePage(),
+      binding: HomeBinding(),
     ),
   ];
 }

@@ -1,4 +1,5 @@
 import 'package:flutter_getx_architecture/domain/exception/auth_exception.dart';
+import 'package:flutter_getx_architecture/domain/model/product.dart';
 import 'package:flutter_getx_architecture/domain/model/user.dart';
 import 'package:flutter_getx_architecture/domain/repository/api_repository.dart';
 import 'package:flutter_getx_architecture/domain/response/login_response.dart';
@@ -32,5 +33,12 @@ class ApiRepositoryImpl extends ApiRepositoryInterface {
   Future<void> logout(String token) async {
     await Future.delayed(const Duration(seconds: 3));
     print('logout ...');
+  }
+
+  @override
+  Future<List<Product>> getProducts() async {
+    await Future.delayed(const Duration(seconds: 1));
+    List<Product> products = [];
+    return products;
   }
 }

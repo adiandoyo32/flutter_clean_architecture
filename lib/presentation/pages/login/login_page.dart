@@ -4,8 +4,6 @@ import 'package:flutter_getx_architecture/presentation/routes/router.dart';
 import 'package:get/get.dart';
 
 class LoginPage extends GetWidget<LoginController> {
-  const LoginPage({Key? key}) : super(key: key);
-
   void login() async {
     final bool result = await controller.login();
     if (result) {
